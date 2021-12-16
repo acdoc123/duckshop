@@ -2,6 +2,9 @@ const {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
   PRODUCT_LIST_FAIL,
+  PRODUCT_LIST1_REQUEST,
+  PRODUCT_LIST1_SUCCESS,
+  PRODUCT_LIST1_FAIL,
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_FAIL,
@@ -46,7 +49,26 @@ export const productListReducer = (
       return state;
   }
 };
-
+export const productList1Reducer = (
+  state = { loading: true, products1: [] },
+  action
+) => {
+  switch (action.type) {
+    case PRODUCT_LIST1_REQUEST:
+      return { loading: true };
+    case PRODUCT_LIST1_SUCCESS:
+      return {
+        loading1: false,
+        products1: action.payload.products,
+        pages1: action.payload.pages,
+        page1: action.payload.page,
+      };
+    case PRODUCT_LIST1_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
 export const productCategoryListReducer = (
   state = { loading: true, products: [] },
   action

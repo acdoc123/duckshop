@@ -6,7 +6,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Product from '../components/Product';
 import Rating from '../components/Rating';
-import { prices, ratings } from '../utils';
+import { ratings } from '../utils';
 
 export default function SearchScreen(props) {
   const navigate = useNavigate();
@@ -61,7 +61,7 @@ export default function SearchScreen(props) {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div>{products.length} Results</div>
+          <div></div>
         )}
         <div>
           Sort by{' '}
@@ -79,7 +79,7 @@ export default function SearchScreen(props) {
         </div>
       </div>
       <div className="row top">
-        <div className="col-1">
+        <div className="col-11">
           <h3>Department</h3>
           <div>
             {loadingCategories ? (
@@ -109,7 +109,7 @@ export default function SearchScreen(props) {
               </ul>
             )}
           </div>
-          <div>
+          {/* <div>
             <h3>Price</h3>
             <ul>
               {prices.map((p) => (
@@ -125,9 +125,9 @@ export default function SearchScreen(props) {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
           <div>
-            <h3>Avg. Customer Review</h3>
+            <h3>Avg. Review</h3>
             <ul>
               {ratings.map((r) => (
                 <li key={r.name}>
@@ -152,7 +152,7 @@ export default function SearchScreen(props) {
               {products.length === 0 && (
                 <MessageBox>No Product Found</MessageBox>
               )}
-              <div className="row center">
+              <div className="row start">
                 {products.map((product) => (
                   <Product key={product._id} product={product}></Product>
                 ))}

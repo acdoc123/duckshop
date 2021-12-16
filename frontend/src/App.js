@@ -28,7 +28,7 @@ import MessageBox from './components/MessageBox';
 import MapScreen from './view/MapScreen';
 import DashboardScreen from './view/DashboardPage';
 import SupportScreen from './view/SupportPage';
-import ChatBox from './components/ChatBox';
+// import ChatBox from './components/ChatBox';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -127,9 +127,9 @@ function App() {
                   <li>
                     <Link to="/userlist">Users</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/support">Support</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             )}
@@ -290,7 +290,7 @@ function App() {
             <Route path="/" element={<HomeScreen />} exact></Route>
           </Routes>
         </main>
-        {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
+        {/* {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />} */}
         <footer className="row center">
           <div><p>&copy; 2021 - HQV</p></div>
         </footer>

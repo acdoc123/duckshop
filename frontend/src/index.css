@@ -99,8 +99,8 @@ input:hover,
 select:hover,
 textarea:hover,
 button:hover {
-  border: 0.1rem #f0c040 solid;
-  background-color: #f0c040;
+  border: 0.2rem #f0c040 solid;
+ 
 }
 button.primary {
   background-color: #f0c040;
@@ -170,6 +170,9 @@ a.brand {
 .col-1 {
   flex: 1 1 25rem;
 }
+.col-11 {
+  flex: 1 1 20rem;
+}
 .col-2 {
   flex: 2 1 5rem;
 }
@@ -228,7 +231,10 @@ aside li {
 button.close-sidebar {
   padding: 0.3rem 0.8rem;
 }
-
+.backto{
+  margin:3rem;
+  border: 5px #db8145;
+}
 /* Image */
 img {
   border-radius: 0.5rem;
@@ -239,16 +245,16 @@ img.small {
 }
 img.medium {
   width: 29rem;
-  height: 30rem;
+  height: 35rem;
 
 }img.medium1 {
   width: 29rem;
-  height: 30rem;
+  height: 35rem;
 
 }
 img.large {
-  width: 29rem;
-  height: 30rem;
+  width: 35rem;
+  height: 45rem;
 }
 
 /* Card */

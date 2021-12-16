@@ -132,7 +132,7 @@ export default function ProductEditScreen(props) {
               ></input>
             </div> */}
             <div>
-              <label htmlFor="imageFile">Image File: {image}</label>
+              <label htmlFor="imageFile">Image:</label>
               <img className="medium" src={image} alt="some..." />
               <input
                 type="file"
